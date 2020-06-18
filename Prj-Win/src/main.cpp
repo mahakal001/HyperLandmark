@@ -15,8 +15,8 @@ using namespace cv;
 int main()
 {
 
-	ldmarkmodel modelt("model/haar_facedetection.xml");
-    std::string modelFilePath = "model/landmark-model.bin";
+	ldmarkmodel modelt("../../model/haar_facedetection.xml");
+    std::string modelFilePath = "../../model/landmark-model.bin";
 
     if(!load_ldmarkmodel(modelFilePath, modelt)){
         std::cout << "Modle Opening Failed." << std::endl;

@@ -9,10 +9,10 @@ cv::Mat CalculateHogDescriptor(cv::Mat &src, cv::Mat shape, std::vector<int> Lan
 		grayImage = src;
 	}
 	else if (src.channels() == 3){
-		cv::cvtColor(src, grayImage, CV_BGR2GRAY);
+		cv::cvtColor(src, grayImage, cv::COLOR_BGR2GRAY); 
 	}
 	else if (src.channels() == 4){
-		cv::cvtColor(src, grayImage, CV_RGBA2GRAY);
+		cv::cvtColor(src, grayImage, cv::COLOR_RGBA2GRAY);
 	}
 	else{
 		return cv::Mat();
